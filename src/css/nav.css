@@ -1,0 +1,18 @@
+.navBarCompleta{
+    background-color: #131921 !important;
+    height: 6rem !important;
+}
+
+.link{
+    color: #fff !important;
+}
+.link:link { text-decoration: none; }
+
+
+.link:visited { text-decoration: none; }
+
+
+.link:hover { text-decoration: none; }
+
+
+.link:active { text-decoration: none; }

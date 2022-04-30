@@ -3,7 +3,7 @@ import { Button, Container, Form } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { useForm } from '../Hooks/useForm';
-import { loginEmailPassAsync, loginGoogle} from '../redux/actions/actionLogin';
+import { loginEmailPassAsync, loginFacebook, loginGoogle} from '../redux/actions/actionLogin';
 
 const Login = () => {
 
@@ -25,6 +25,10 @@ const Login = () => {
   
 const handleGoogle =()=>{
     dispatch(loginGoogle())
+}
+
+const handleFacebook =()=>{
+    dispatch(loginFacebook())
 }
 
     return (
@@ -70,6 +74,19 @@ const handleGoogle =()=>{
                 >
                     <Container className="google-icon-wrapper">
                         <img className="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="google button" />
+                    </Container>
+                </Container>
+            </Container>
+            <br/>
+            <Container className="auth__social-networks">
+                <Container
+                    className="google-btn"
+                    onClick={handleFacebook}
+                  
+
+                >
+                    <Container className="google-icon-wrapper">
+                        <img className="google-icon" width={30} src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Facebook_icon_2013.svg" alt="facebook button" />
                     </Container>
                 </Container>
             </Container>
